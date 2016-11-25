@@ -4,7 +4,6 @@ import { render } from 'react-dom';
 import Root from './app';
 
 const elem = document.getElementById('app')
-
 render(
   <AppContainer>
       <Root />
