@@ -1,0 +1,9 @@
+.icon{
+	width:24px;
+	height: 24px;
+	margin-top: 12px;
+	margin-right: 12px;
+}
+.icon::before{
+	content: url('../../resources/iconfonts/ic_android_white_24px.svg');
+}
