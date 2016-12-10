@@ -1,7 +1,7 @@
 import {
   COUNTER_INC,
   COUNTER_DEC
-} from '../actions/counter_action';
+} from '../constants/action-type';
 import createReducer from '../store/create-reducers'
 
 const initialState = {

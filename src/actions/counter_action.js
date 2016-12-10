@@ -5,7 +5,7 @@ export function inc() {
 	return (dispatch) => {
 		dispatch({
 		  type: COUNTER_INC
-		})		
+		})
 	}
 }
 

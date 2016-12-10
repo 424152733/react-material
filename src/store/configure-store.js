@@ -1,9 +1,10 @@
 import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
 import thunk from 'redux-thunk';
 import reduxLogger from 'redux-logger'
-
+import createSagaMiddleware from 'redux-saga';
+const sagaMiddleware = createSagaMiddleware();
 import * as reducers from '../reducers';
-let middlewares = [thunk];
+let middlewares = [/*thunk*/sagaMiddleware];
 
 if (process.env.NODE_ENV === 'development') {
   const logger = reduxLogger()

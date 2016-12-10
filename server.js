@@ -2,16 +2,16 @@ var path = require('path');
 var express = require('express');
 var webpack = require('webpack');
 var config = require('./build/webpack.config.dev');
-var port = 3000;
+var port = 4000;
 var app = express();
 var compiler = webpack(config);
-
 var webpackDevMiddleware = require('webpack-dev-middleware')(compiler, {
   noInfo: true,
   //publicPath必须跟webpack.config.js的ouput.publickPath一致
   publicPath: config.output.publicPath,
 })
 app.use(webpackDevMiddleware);
+
 app.use(require('webpack-hot-middleware')(compiler));
 //访问的静态文件
 app.use(express.static(path.join(__dirname, './public'),{

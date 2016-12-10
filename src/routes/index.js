@@ -15,6 +15,6 @@ const getComp = function(path) {
 }
 export default (
 	<Router component={Application}>
-		<Route path="/"></Route>
+		<Route path="/" getComponent={getComp('counter')}></Route>
 	</Router>
 )
